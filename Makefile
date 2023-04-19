@@ -1,6 +1,6 @@
 ## This makefile must be executed with gmake (gnu make).
 
-f90comp = gfortran
+f90comp = gfortran -frecursive -fdefault-integer-8
 
 all:
 	$(f90comp) -o bin/statsod src/statsod.f90
