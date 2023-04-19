@@ -21,8 +21,8 @@
     PROGRAM combsod 
        IMPLICIT NONE
 
-       INTEGER,PARAMETER :: NSPMAX=100 , NATMAX=100000, NOPMAX=50000, NCELLMAX=10000
-       INTEGER,PARAMETER :: NLINEAMAX=2000 
+       INTEGER,PARAMETER :: NSPMAX=100 , NATMAX=10000, NOPMAX=5000, NCELLMAX=1000
+       INTEGER,PARAMETER :: NLINEAMAX=200 
        REAL,PARAMETER :: tol0=0.0001, kB=8.61734E-5
       
        INTEGER :: i,j,k,l,xx,yy,suma,t,ina,inb,inc,elei, factorial, sub
@@ -30,7 +30,7 @@
        INTEGER :: sp, nsp, spmap, nspmap, cumnatsp, cumnatspmap, sptarget, sptargetmap,ssp
        INTEGER :: at0, nat0, at1, nat1, nat1r, at, nat , atmap, natmap, at1r, at1i,attmp,att,mapno,FILER, MAPPER
        INTEGER :: na,nb,nc,nsubs,nsubsmap,atini,atfin,atinimap,atfinmap
-       INTEGER :: pos,npos,count,ntc,ntcmax,nic,equivcount,iequiv,indcount
+       INTEGER(kind=8) :: pos,npos,count,ntc,ntcmax,nic,equivcount,iequiv,indcount
        LOGICAL :: found,foundnoind,mores
        INTEGER,DIMENSION(:), ALLOCATABLE:: newconf
        INTEGER,DIMENSION(2)   :: newshell, newshellmap
